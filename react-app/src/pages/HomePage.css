@@ -1,0 +1,173 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+}
+
+.top-section {
+  background-image: url("/Background.svg");
+  height: 50%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+
+.bottom-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-menu {
+  background-color: #00236d;
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+  height: 40%;
+}
+
+.top-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 48px;
+  height: 10%;
+}
+.top-recipes-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 90%;
+  padding: 40px 80px;
+}
+
+.top-recipe {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  width: 30%;
+  margin: 15px 60px;
+}
+
+.recipe-image {
+  width: 50%;
+  border-right: 2px solid #009c41;
+  object-fit: cover;
+}
+
+.recipe-info {
+  width: 50%;
+  padding: 10px;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 10%;
+}
+
+.author {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: -10px;
+}
+
+.contact-form-table {
+  display: flex;
+  justify-content: space-between;
+  height: 50%;
+}
+
+.contact-title {
+  color: #009c41;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.contact-form-left {
+  width: 30%;
+  margin: 3%;
+  margin-left: 10%;
+}
+
+.contact-form-right {
+  width: 50%;
+  margin-top: 8%;
+  margin-left:5%;
+  margin-right: 15%;
+  margin-bottom: 2%;
+}
+
+.contact-form-left input,
+.contact-form-right textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  color: #00236d;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 35, 109, 0.5);
+}
+
+.contact-form-right textarea {
+  height:70%;
+
+}
+
+.forms {
+  border:#009c41 2px solid;
+  background-color:#ffffff;
+}
+
+.forms::placeholder {
+  font-size: 24;
+  font-weight: 300;
+  color:#009c41;
+}
+
+.btn-submit {
+  background-color: #009c41;
+  font-weight: 600;
+  font-size: 24;
+  width: 15%;
+  margin-left: 85%;
+}
+
+.footer {
+  padding-top: 25px;
+  height: 10%;
+  background-image: url("/Footer.svg");
+  height: 10%;
+  text-align: center;
+}
+
+.footer-icon {
+  justify-content: center;
+  padding: 20px;
+}
+
