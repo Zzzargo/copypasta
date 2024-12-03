@@ -1,6 +1,95 @@
 .profilepage {
-    height: 100vh;
-    background-image: url(Background.svg);
-    background-size:cover;
-    background-position:center;
+  height: 100vh;
+  background-image: url(Background.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+
+.profile-divider {
+  display: flex;
+  flex-direction: row;
+  gap: 15%;
+  height: 50%;
+  width: 100%;
+  /* margin-bottom:1%; */
+}
+
+.profile-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00236d;
+  width: 40%;
+  height: 100%;
+  margin-left: 10%;
+}
+
+.profile-image {
+  padding-bottom: 20%;
+}
+
+.username {
+  width: 80%;
+  background-color: #00236d;
+  border: none;
+  padding-bottom: 0.5em;
+  border-bottom: #ffffff 1px solid;
+}
+
+.username::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.profile-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  background-color: #00236d;
+  width: 60%;
+  height: 100%;
+  margin-right: 10%;
+}
+
+.profile-textbox {
+  width: 80%;
+  margin-bottom: 10%;
+  padding-bottom: 0.5em;
+  background-color: #00236d;
+  border: none;
+  border-bottom: #ffffff 1px solid;
+}
+
+.profile-textbox::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.profile-add-recipe-btn {
+  /* margin-bottom: -2%; */
+  background-color: #009c41;
+  width: 12em;
+  box-shadow: 0 0 5px 1px #005e27;
+}
+
+.profile-add-recipe-btn:hover {
+  border: #00ad48 1px solid;
+}
+
+.profile-add-recipe-btn:active {
+  background-color: #00ad48;
 }

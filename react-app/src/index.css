@@ -86,3 +86,10 @@ button:focus-visible {
   border-color:#ffffff;
   background-color:#3a6bd6
 }
+
+.container-fluid .navbar-brand {
+  margin-right: 5em;
+}
+.navbar-nav .nav-item {
+  margin-right: 2em;
+}

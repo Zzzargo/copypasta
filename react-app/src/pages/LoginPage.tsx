@@ -15,7 +15,7 @@ function LoginPage() {
           <div className="login-menu-item">
             <div className="input-wrapper">
               <img className="input-icon" src="/MailIcon.svg"></img>
-              <input type="text" className="login-field" placeholder="E-mail" />
+              <input type="email" className="login-field" placeholder="E-mail" />
             </div>
             <div className="input-wrapper">
               <img className="input-icon" src="/LockIcon.svg"></img>

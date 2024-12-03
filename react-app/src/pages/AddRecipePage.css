@@ -1,6 +1,63 @@
 .addrecipepage {
-    height: 100vh;
-    background-image: url(Background.svg);
-    background-size:cover;
-    background-position:center;
+  height: 100vh;
+  background-image: url(Background.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-recipe-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #00236d;
+  color: #ffff;
+  width: 60vh;
+  height: 60vh;
+  padding-top: 5em;
+}
+
+.recipe-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  /* margin-top:5em; */
+  margin-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #00236d;
+  border: none;
+  border-bottom: #ffffff 1px solid;
+}
+
+.recipe-field::placeholder {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.upload-form {
+    margin-top:1em;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.upload-button {
+    width:70%
+}
+
+.add-recipe-menu .btn-success {
+  display: flex;
+  justify-content: center;
+  background-color: #009c41;
+  width: 50%;
+  font-weight: 700;
+  font-size: 36px;
 }
