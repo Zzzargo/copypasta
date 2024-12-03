@@ -7,6 +7,7 @@ function RegisterPage() {
       <div>
         <NavBar />
       </div>
+      <div className="registerpage"></div>
     </>
   );
 }

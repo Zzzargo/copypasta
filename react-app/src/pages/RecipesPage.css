@@ -1,0 +1,6 @@
+.recipespage {
+    height: 100vh;
+    background-image: url(Background.svg);
+    background-size:cover;
+    background-position:center;
+}

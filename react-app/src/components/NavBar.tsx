@@ -5,7 +5,7 @@ function NavBar() {
     <>
       <nav className="navbar navbar-expand-lg  p-3 shadow-lg rounded-bottom-5">
         <div className="container-fluid">
-          <a className="home navbar-brand" href="/">
+          <a className="navbar-brand" href="/">
             <img src="Chef.svg"></img>
             <img src="LogoIT.svg"></img>
           </a>
@@ -25,8 +25,8 @@ function NavBar() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link" href="/login">
-                  <button type="button" className="loginbtn btn btn-outline-primary rounded-4">
-                    <p className="navbar-item lgn">Login</p>
+                  <button type="button" className="loginbtn btn-outline-primary btn rounded-4">
+                    <p className="navbar-item">Login</p>
                   </button>
                 </a>
               </li>

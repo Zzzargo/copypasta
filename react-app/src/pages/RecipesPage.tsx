@@ -7,6 +7,7 @@ function RecipesPage() {
       <div>
         <NavBar />
       </div>
+      <div className="recipespage"></div>
     </>
   );
 }

@@ -67,17 +67,22 @@ button:focus-visible {
   color: white;
   font-size: 22px;
   font-weight: 600;
+  display:inline-block;
 }
 
-.loginbtn {
-  height: 50px;
-  padding: 0.4em 1.5em;
+.navbar .loginbtn {
+  height: 2.5em;
+  padding: 0 1.5em;
   font-size: 18px;
   font-weight: 600;
-  background-color: #ffffff;
   color: #00236d;
-  border: 2px solid #00236d;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: #ffffff 3px solid;
+}
+
+.navbar .loginbtn:hover {
+  border-color:#ffffff;
+  background-color:#3a6bd6
 }

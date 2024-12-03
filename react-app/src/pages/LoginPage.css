@@ -1,0 +1,99 @@
+.loginpage {
+  height: 100vh;
+  background-image: url(Background.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-menu {
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color:#00236d;
+  color:#ffff;
+  width: 70vh;
+  height: 70vh;
+}
+
+.login-menu-item {
+    justify-items:center; /*orizontal*/
+    align-items:center;
+    width:100%;
+    height: 33%;
+}
+
+.login-menu-title {
+    height: 100%;
+    width:60%;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.input-wrapper {
+    width: 80%;
+    display: flex;
+}
+
+.login-field {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    /* margin-top:1em;*/
+    margin-bottom: 2em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    background-color:#00236d;
+    border: none;
+    border-bottom: #ffffff 3px solid;
+}
+
+.login-field::placeholder {
+    color: #ffffff;
+    font-weight: 500;
+    font-size:16px;
+}
+
+.input-icon {
+    /* margin-top:1em;*/
+    margin-bottom: 2em;
+    padding-top:1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-bottom: #ffffff 3px solid;
+}
+
+.login-menu-item .btn-success {
+    display: flex;
+    justify-content: center;
+    background-color: #009C41;
+    width:50%;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.recovery-link {
+    display: flex;
+    margin-top:2em;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.recovery-link:hover {
+    color: #aac5ff;
+}
+
+.recovery-link:active {
+    color:#009C41
+}

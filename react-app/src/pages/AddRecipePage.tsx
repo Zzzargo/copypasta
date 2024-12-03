@@ -7,6 +7,7 @@ function AddRecipePage() {
       <div>
         <NavBar />
       </div>
+      <div className="addrecipepage"></div>
     </>
   );
 }
