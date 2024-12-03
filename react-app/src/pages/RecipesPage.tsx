@@ -7,7 +7,9 @@ function RecipesPage() {
       <div>
         <NavBar />
       </div>
-      <div className="recipespage"></div>
+      <div className="recipespage">
+        
+      </div>
     </>
   );
 }

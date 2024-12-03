@@ -1,6 +1,95 @@
 .registerpage {
-    height: 100vh;
-    background-image: url(Background.svg);
-    background-size:cover;
-    background-position:center;
+  height: 100vh;
+  background-image: url(Background.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background-color: #00236d;
+  color: #ffff;
+  width: 70vh;
+  height: 80vh;
+}
+
+.title-wrapper {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.register-inputbox-wrapper {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.register-input-wrapper {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.register-field {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:80%;
+    padding-top:1em;
+    padding-bottom: 1em;
+    background-color:#00236d;
+    border: none;
+    border-bottom: #ffffff 1px solid;
+}
+
+.register-field::placeholder {
+    color: #ffffff;
+    font-weight: 500;
+    font-size:16px;
+}
+
+.register-icon {
+    height:80%;
+    width: 15%;
+    padding-top:1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-bottom: #ffffff 1px solid;
+}
+
+.register-button-area {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height:20%;
+}
+
+.register-menu .btn-success {
+    display: flex;
+    justify-content: center;
+    background-color: #009C41;
+    width:50%;
+    font-weight: 700;
+    font-size: 36px;
 }

@@ -54,7 +54,7 @@
     padding-bottom: 1em;
     background-color:#00236d;
     border: none;
-    border-bottom: #ffffff 3px solid;
+    border-bottom: #ffffff 1px solid;
 }
 
 .login-field::placeholder {
@@ -70,7 +70,7 @@
     padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
-    border-bottom: #ffffff 3px solid;
+    border-bottom: #ffffff 1px solid;
 }
 
 .login-menu-item .btn-success {
