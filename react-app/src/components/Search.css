@@ -1,0 +1,155 @@
+.search-wrapper {
+  width: 70%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 35%;
+  width: 60%;
+  border: #3f3f3f 2px solid;
+}
+
+.searchbar {
+  width: 90%;
+  height: 100%;
+  background-color: #ffffff;
+  border: none;
+  color: #3f3f3f;
+  font-size: 32px;
+  font-weight: 400;
+  padding-left: 10px;
+}
+
+.searchbar:focus {
+  box-shadow: none;
+}
+
+.searchbar::placeholder {
+  color: #3f3f3f;
+}
+
+.search-icon {
+  padding: 1.5% 2%;
+}
+
+.extended-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5em;
+  height: 65%;
+  width: 50%;
+  margin-top: 3%;
+}
+
+.extended-search .dropdown {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  /* align-items:center; */
+  justify-content: center;
+  position: relative;
+}
+
+.extended-search .btn {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  color: #3f3f3f;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  text-align: left;
+  box-shadow: 1px 1px 15px 0 #bdbdbd;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.extended-search .btn:active {
+  background-color: #bdbdbd;
+}
+
+/* No thank you
+.extended-search .btn::after {
+  content: "ss ";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: url("/DropdownCaret.svg") no-repeat center center;
+  background-size: contain;
+} */
+
+.dropdown-name {
+  /* margin-right: 35%; */
+  height: 100%;
+  width: 80%;
+  margin-bottom: 0;
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-caret {
+  width: 20%;
+  height: 100%;
+}
+
+.extended-search .dropdown .dropdown-menu {
+  transform: translateY(17.5%) !important;
+}
+
+.extended-search .show {
+  width: 100%;
+}
+
+.extended-search .dropdown-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.filter-stars {
+    width:90%;
+    height:100%;
+}
+
+.filter-checkbox {
+    width:10% !important;
+    height:100%;
+    transform:scale(1.6);
+    background-color: #f0f0f0; /* Light gray background for unchecked state */
+    border: 2px solid #3f3f3f; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease; /* Smooth transition for color changes */
+}
+
+.filter-checkbox:checked {
+    background-color: #66bb6a; /* Green background when checked */
+    border-color: #66bb6a;
+}
+
+.filter-checkbox:checked::before {
+    content: "✓"; /* Unicode checkmark symbol */
+    color: white; /* Checkmark color */
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}

@@ -21,6 +21,8 @@
 }
 
 .login-menu-item {
+    display: flex;
+    flex-direction: column;
     justify-items:center; /*orizontal*/
     align-items:center;
     width:100%;

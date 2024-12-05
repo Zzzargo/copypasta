@@ -1,0 +1,37 @@
+### Get Users
+GET http://localhost:3000/users
+
+### Insert User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "Uazea",
+    "password": "pulamiea",
+    "email": "zzzargoman@gmail.com",
+    "phone": 25854213
+}
+
+### Login with credentials below
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "password": "pulamiea",
+    "email": "zzzargoman@gmail.com"
+}
+
+### Get Recipes
+GET http://localhost:3000/recipes
+
+### Insert Recipe
+POST http://localhost:3000/recipes
+Content-Type: application/json
+
+{
+    "title": "Recipe title",
+    "description": "Recipe description",
+    "times_rated": 3,
+    "rating": 4,
+    "author": "Gigel Giurgiulescu"
+}

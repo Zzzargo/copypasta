@@ -1,6 +1,74 @@
 .recipespage {
-    height: 100vh;
-    background-image: url(Background.svg);
-    background-size:cover;
-    background-position:center;
+  height: 120vh;
+  background-image: url(Background.svg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 8%;
+}
+
+.found-recipes {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.recipe-card {
+  height: 34em;
+  width: 17em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 6px 0 #bdbdbd;
+}
+
+.recipe-card-image {
+  height: 50%;
+  width: 100%;
+  border-bottom: 2px solid #009c41;
+}
+
+.recipe-card-info {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 1em;
+  margin-bottom: 0;
+  height: 10%;
+  width: 80%;
+  text-align: center;
+}
+
+.recipe-card-info .rating {
+  width: 70%;
+  height: 15%;
+  margin-top: 1em;
+}
+
+.recipe-card-text {
+  height: 10%;
+  width: 80%;
+  text-align: center;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  font-weight:300;
+  font-size:20px;
+}
+
+.recipe-card-author {
+    margin-bottom: 0;
+    margin-top: 2em;
+    font-weight:300;
+    font-size:16px;
 }

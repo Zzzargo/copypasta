@@ -42,7 +42,6 @@
   padding: 20px;
   color: white;
   text-align: center;
-
   height: 40%;
 }
 
@@ -78,21 +77,40 @@
 }
 
 .recipe-info {
+  height: 100%;
   width: 50%;
-  padding: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items:center;
+}
+
+.recipe-title {
+  width:100%;
+  height: 15%;
+  /* margin-bottom: 1em; */
+}
+
+.rating {
+  width: 90%;
+  height: 15%;
 }
 
 .info-text {
-  margin-top: 10px;
   font-weight: 300;
   font-size: 15px;
-  margin-bottom: 10%;
+  margin-top: 7%;
+  margin-bottom: 0;
+  width: 100%;
+  height: 25%;
 }
 
 .author {
   font-size: 20px;
   font-weight: 300;
-  margin-top: -10px;
+  height:20%;
+  width:100;
 }
 
 .contact-form-table {
@@ -162,6 +180,7 @@ input:focus, textarea:focus {
   padding-top: 25px;
   height: 10%;
   background-image: url("/Footer.svg");
+  background-size: cover;
   height: 10%;
   text-align: center;
 }
