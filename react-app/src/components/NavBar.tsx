@@ -13,6 +13,7 @@ function NavBar() {
   const handleLogout = () => {
     setLoggedIn(false);
     localStorage.removeItem("loggedIn"); // Clear state on logout
+    localStorage.setItem("username", "Guest")
   };
 
   return (

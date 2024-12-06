@@ -2,6 +2,11 @@ import "./ProfilePage.css";
 import NavBar from "../components/NavBar";
 
 function ProfilePage() {
+  const user = localStorage.getItem("username");
+  const userphone = localStorage.getItem("phone");
+  const useremail = localStorage.getItem("email");
+  const college_group = localStorage.getItem("college_group");
+
   return (
     <>
       <div>
@@ -11,24 +16,12 @@ function ProfilePage() {
         <div className="profile-divider">
           <div className="profile-card rounded-4">
             <img className="profile-image" src="CookIcon.svg"></img>
-            <input
-              className="username"
-              type="text"
-              placeholder="Gogu Bucatar"></input>
+            <p className="username">Username: {user}</p>
           </div>
           <div className="profile-info rounded-4">
-            <input
-              className="profile-textbox"
-              type="email"
-              placeholder="Email:"></input>
-            <input
-              className="profile-textbox"
-              type="tel"
-              placeholder="Telephone:"></input>
-            <input
-              className="profile-textbox"
-              type="text"
-              placeholder="College group:"></input>
+            <p className="profile-textbox">Email: {useremail}</p>
+            <p className="profile-textbox">Phone: {userphone}</p>
+            <p className="profile-textbox">College group: {college_group}</p>
           </div>
         </div>
         <a href="/addrecipe">

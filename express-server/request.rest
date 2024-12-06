@@ -7,8 +7,8 @@ Content-Type: application/json
 
 {
     "username": "Uazea",
-    "password": "pulamiea",
-    "email": "zzzargoman@gmail.com",
+    "password": "hash",
+    "email": "aa@a",
     "phone": 25854213
 }
 
@@ -17,8 +17,16 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "password": "pulamiea",
-    "email": "zzzargoman@gmail.com"
+    "password": "hash",
+    "email": "aa@a"
+}
+
+### Remove User
+DELETE http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "Uazea"
 }
 
 ### Get Recipes
@@ -29,9 +37,16 @@ POST http://localhost:3000/recipes
 Content-Type: application/json
 
 {
-    "title": "Recipe title",
+    "title": "Rece title",
     "description": "Recipe description",
-    "times_rated": 3,
-    "rating": 4,
     "author": "Gigel Giurgiulescu"
+}
+
+### Remove Recipe
+
+DELETE http://localhost:3000/recipes
+Content-Type: application/json
+
+{
+    "title": "fill"
 }

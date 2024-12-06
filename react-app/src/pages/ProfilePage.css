@@ -41,9 +41,6 @@
   border: none;
   padding-bottom: 0.5em;
   border-bottom: #ffffff 1px solid;
-}
-
-.username::placeholder {
   color: #ffffff;
   font-weight: 400;
   font-size: 18px;
@@ -70,9 +67,6 @@
   background-color: #00236d;
   border: none;
   border-bottom: #ffffff 1px solid;
-}
-
-.profile-textbox::placeholder {
   color: #ffffff;
   font-weight: 400;
   font-size: 22px;

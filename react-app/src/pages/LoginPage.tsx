@@ -20,7 +20,15 @@ function LoginPage() {
 
       if (response.status === 200) {
         alert("Login successful!");
+        const { username } = response.data;
+        const { phone } = response.data;
+        const { email } = response.data;
+        const { college_group } = response.data;
         localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("username", username);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("email", email);
+        localStorage.setItem("college_group", college_group);
         navigate("/");
       } else {
         alert("Invalid credentials, please try again.");

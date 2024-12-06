@@ -1,7 +1,6 @@
 import "./RecipesPage.css";
 import NavBar from "../components/NavBar";
 import Search from "../components/Search";
-import PageNav from "../components/PageNav";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -48,14 +47,15 @@ function RecipesPage() {
               <div className="recipe-card-info">
                 <p className="recipe-card-title">{recipe.title}</p>
                 {getRatingImage(recipe.rating)}
-                <p className="recipe-card-text">Nr ratinguri: {recipe.times_rated}</p>
+                <p className="recipe-card-text">
+                  Nr ratinguri: {recipe.times_rated}
+                </p>
                 <p className="recipe-card-author">Author:</p>
                 <p className="recipe-card-text">{recipe.author}</p>
               </div>
             </div>
           ))}
         </div>
-        <PageNav />
       </div>
     </>
   );

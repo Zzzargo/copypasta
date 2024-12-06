@@ -8,7 +8,18 @@ function Search() {
           className="searchbar rounded-3"
           type="search"
           placeholder="Search"
-          aria-label="Search"></input>
+          aria-label="Search"
+          onChange={(event) => {
+            const allRecipes = document.querySelectorAll(".recipe-card");
+            const searchContent = event.target.value;
+            allRecipes.forEach((recipe) => {
+              const title =
+                recipe.querySelector(".recipe-card-title")?.textContent;
+              if (title?.toLowerCase()?.includes(searchContent.toLowerCase()))
+                recipe.classList.remove("hidden");
+              else recipe.classList.add("hidden");
+            });
+          }}></input>
         <img className="search-icon" src="/SearchIcon.png"></img>
       </div>
       <div className="extended-search">
