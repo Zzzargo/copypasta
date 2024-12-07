@@ -1,6 +1,24 @@
 import "./Search.css";
+import { useState } from "react";
 
-function Search() {
+function Search({ onFilterAndSort }) {
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [sortOrder, setSortOrder] = useState(null);
+
+  const handleFilterChange = (rating) => {
+    const newFilters = selectedFilters.includes(rating)
+      ? selectedFilters.filter((r) => r !== rating)
+      : [...selectedFilters, rating];
+
+    setSelectedFilters(newFilters);
+    onFilterAndSort(newFilters, sortOrder); // Pass updated filters to parent
+  };
+
+  const handleSortChange = (sortOption) => {
+    setSortOrder(sortOption);
+    onFilterAndSort(selectedFilters, sortOption); // Pass updated sorting to parent
+  };
+
   return (
     <form className="search-wrapper" role="search">
       <div className="searchbar-wrapper rounded-3">
@@ -20,6 +38,7 @@ function Search() {
               else recipe.classList.add("hidden");
             });
           }}></input>
+
         <img className="search-icon" src="/SearchIcon.png"></img>
       </div>
       <div className="extended-search">
@@ -33,36 +52,36 @@ function Search() {
             <img className="dropdown-caret" src="/DropdownCaret.svg"></img>
           </button>
           <ul className="dropdown-menu">
-            <li>
-              <a className="dropdown-item" href="#">
-                <img className="filter-stars" src="5stars.svg"></img>
-                <input className="filter-checkbox" type="checkbox"></input>
-              </a>
+            {[5, 4, 3, 2, 1].map((rating) => (
+              <li key={rating} className="dropdown-item">
+                <img className="filter-stars" src={`${rating}stars.svg`}></img>
+                <input
+                  className="filter-checkbox"
+                  type="checkbox"
+                  onChange={() => handleFilterChange(rating)}></input>
+              </li>
+            ))}
+
+            {/* I'll leave this here until I'm sure I fully understand what I did above. <li className="dropdown-item">
+              <img className="filter-stars" src="5stars.svg"></img>
+              <input className="filter-checkbox" type="checkbox"></input>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                <img className="filter-stars" src="4stars.svg"></img>
-                <input className="filter-checkbox" type="checkbox"></input>
-              </a>
+            <li className="dropdown-item">
+              <img className="filter-stars" src="4stars.svg"></img>
+              <input className="filter-checkbox" type="checkbox"></input>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                <img className="filter-stars" src="3stars.svg"></img>
-                <input className="filter-checkbox" type="checkbox"></input>
-              </a>
+            <li className="dropdown-item">
+              <img className="filter-stars" src="3stars.svg"></img>
+              <input className="filter-checkbox" type="checkbox"></input>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                <img className="filter-stars" src="2stars.svg"></img>
-                <input className="filter-checkbox" type="checkbox"></input>
-              </a>
+            <li className="dropdown-item">
+              <img className="filter-stars" src="2stars.svg"></img>
+              <input className="filter-checkbox" type="checkbox"></input>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                <img className="filter-stars" src="1star.svg"></img>
-                <input className="filter-checkbox" type="checkbox"></input>
-              </a>
-            </li>
+            <li className="dropdown-item">
+              <img className="filter-stars" src="1stars.svg"></img>
+              <input className="filter-checkbox" type="checkbox"></input>
+            </li> */}
           </ul>
         </div>
         <div className="dropdown">
@@ -75,26 +94,29 @@ function Search() {
             <img className="dropdown-caret" src="/DropdownCaret.svg"></img>
           </button>
           <ul className="dropdown-menu">
-            <li>
-              <a className="dropdown-item" href="#">
-                Top Rated
-              </a>
+            {["Top Rated", "Worst Rated", "Most Rated", "Least Rated"].map(
+              (sortOption) => (
+                <li
+                  key={sortOption}
+                  className="dropdown-item"
+                  onClick={() => handleSortChange(sortOption)}>
+                  <p className="sort-by">{sortOption}</p>
+                </li>
+              )
+            )}
+
+            {/* I'll leave this here until I'm sure I fully understand what I did above. <li className="dropdown-item">
+              <p className="sort-by">Top Rated</p>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Worst Rated
-              </a>
+            <li className="dropdown-item">
+              <p className="sort-by">Worst Rated</p>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Most Rated
-              </a>
+            <li className="dropdown-item">
+              <p className="sort-by">Most Rated</p>
             </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Least Rated
-              </a>
-            </li>
+            <li className="dropdown-item">
+              <p className="sort-by">Least Rated</p>
+            </li> */}
           </ul>
         </div>
       </div>

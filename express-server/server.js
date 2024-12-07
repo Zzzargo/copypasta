@@ -106,11 +106,55 @@ app.post("/recipes", async (req, res) => {
       title: req.body.title,
       description: req.body.description,
       author: req.body.author,
+      rating: req.body.rating,
+      times_rated: req.body.times_rated,
     });
     await recipe.save();
     res.status(201).send("Recipe added successfully");
   } catch (error) {
     res.status(500).send(error.message);
+  }
+});
+
+// Set a recipe's rating
+app.patch("/recipes", async (req, res) => {
+  try {
+    const { title, rated } = req.body;
+
+    if (!title || !rated) {
+      return res
+        .status(400)
+        .json({ message: "Both title and rating are required" });
+    }
+
+    if (rated < 1 || rated > 5) {
+      return res
+        .status(400)
+        .json({ message: "Rating must be between 1 and 5" });
+    }
+
+    const recipe = await Recipe.findOne({ title });
+
+    if (!recipe) {
+      return res.status(404).json({ message: "Recipe not found" });
+    }
+
+    // Calculate the new rating
+    const totalRating = recipe.rating * recipe.times_rated + rated;
+    const newTimesRated = recipe.times_rated + 1;
+    const newRating = totalRating / newTimesRated;
+
+    recipe.rating = Math.round(newRating * 10) / 10; // Round to 1 decimal place
+    recipe.times_rated = newTimesRated;
+
+    await recipe.save();
+
+    res.status(200).json({
+      message: `Recipe "${title}" successfully updated`,
+      updatedRecipe: recipe,
+    });
+  } catch (error) {
+    res.status(500).send({ message: "Server error", error: error.message });
   }
 });
 
