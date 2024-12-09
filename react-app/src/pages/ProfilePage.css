@@ -87,3 +87,12 @@
 .profile-add-recipe-btn:active {
   background-color: #00ad48;
 }
+
+.profile-info .btn {
+  border: #ffffff 3px solid;
+  height: 3.5em;
+}
+
+.profile-info .btn:hover {
+  background-color: #3a6bd6;
+}

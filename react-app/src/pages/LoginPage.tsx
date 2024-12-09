@@ -30,6 +30,8 @@ function LoginPage() {
         localStorage.setItem("email", email);
         localStorage.setItem("college_group", college_group);
         navigate("/");
+        console.log(response.data);
+        console.log(localStorage);
       } else {
         alert("Invalid credentials, please try again.");
       }

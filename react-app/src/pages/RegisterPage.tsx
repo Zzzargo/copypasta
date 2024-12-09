@@ -2,6 +2,7 @@ import "./RegisterPage.css";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
   const [username, setUsername] = useState("");
@@ -11,8 +12,7 @@ function RegisterPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page refresh
-
+    e.preventDefault();
     if (password !== confirmPassword) {
       alert("Passwords do not match!");
       return;

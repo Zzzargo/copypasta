@@ -61,27 +61,6 @@ function Search({ onFilterAndSort }) {
                   onChange={() => handleFilterChange(rating)}></input>
               </li>
             ))}
-
-            {/* I'll leave this here until I'm sure I fully understand what I did above. <li className="dropdown-item">
-              <img className="filter-stars" src="5stars.svg"></img>
-              <input className="filter-checkbox" type="checkbox"></input>
-            </li>
-            <li className="dropdown-item">
-              <img className="filter-stars" src="4stars.svg"></img>
-              <input className="filter-checkbox" type="checkbox"></input>
-            </li>
-            <li className="dropdown-item">
-              <img className="filter-stars" src="3stars.svg"></img>
-              <input className="filter-checkbox" type="checkbox"></input>
-            </li>
-            <li className="dropdown-item">
-              <img className="filter-stars" src="2stars.svg"></img>
-              <input className="filter-checkbox" type="checkbox"></input>
-            </li>
-            <li className="dropdown-item">
-              <img className="filter-stars" src="1stars.svg"></img>
-              <input className="filter-checkbox" type="checkbox"></input>
-            </li> */}
           </ul>
         </div>
         <div className="dropdown">
@@ -104,19 +83,6 @@ function Search({ onFilterAndSort }) {
                 </li>
               )
             )}
-
-            {/* I'll leave this here until I'm sure I fully understand what I did above. <li className="dropdown-item">
-              <p className="sort-by">Top Rated</p>
-            </li>
-            <li className="dropdown-item">
-              <p className="sort-by">Worst Rated</p>
-            </li>
-            <li className="dropdown-item">
-              <p className="sort-by">Most Rated</p>
-            </li>
-            <li className="dropdown-item">
-              <p className="sort-by">Least Rated</p>
-            </li> */}
           </ul>
         </div>
       </div>
