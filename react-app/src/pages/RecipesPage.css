@@ -1,10 +1,11 @@
 .recipespage {
-  height: 120vh;
+  height: 100%;
+  width: 100%;
   background-image: url(Background.svg);
   background-size: cover;
   background-position: center;
   /* background-image: url(recipe-page-background.svg); */
-  background-repeat: repeat;
+  /* background-repeat: repeat; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,4 +1,4 @@
-# 🍽️ Proba IT 2024 - Copy Pasta
+# 🍽️ Copy Pasta - A chef's friend
 
 **Copy Pasta** is a web application where users can browse, filter, sort, add and rate recipes. This app is designed to offer an intuitive user experience, with dynamic interactions on the front-end and a robust back-end for managing recipes.
 
